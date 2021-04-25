@@ -23,7 +23,7 @@ def plot_screenshot(df):
     plt.ylabel('Interest %')
     plt.xlabel('Day')
 
-    plt.savefig('./static/img/monthly_yields.png')
+    plt.savefig('./charts/monthly_yields.png')
 
     plt.title('Year based bonds yield change')
     plt.plot(df2)
@@ -31,7 +31,7 @@ def plot_screenshot(df):
     plt.ylabel('Interest % ')
     plt.xlabel('Day ')
 
-    plt.savefig('./static/img/yearly_yields.png')
+    plt.savefig('./charts/yearly_yields.png')
 
 
 if __name__ == '__main__':
