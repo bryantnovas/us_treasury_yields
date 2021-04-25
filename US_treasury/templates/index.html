@@ -2,6 +2,9 @@
 
 {% block title %} US Treasury Yield Curve {% endblock %}
 
+{% load static%}
 {% block content %}
-<h1>home page</h1>
+<h1 style="text-align: center;">Charts</h1>
+<img src="{% static 'img/monthly_yields.png' %}" alt=" monthly yields chart">
+<img src="{% static 'img/yearly_yields.png'%}" alt="yearly yields chart">
 {% endblock %}

@@ -15,13 +15,15 @@ def plot_screenshot(df):
     df1 = df.iloc[:, 1:5]
     df2 = df.iloc[:, 5:]
 
-    plt.plot(df1)
+    plt.figure(1, figsize=(10, 8))
+    plt.plot(df['Date'], df1)
+    plt.xticks(rotation=60, fontsize='small')
     plt.title('Month based bonds yield change')
     plt.legend(labels=df1.columns)
     plt.ylabel('Interest %')
     plt.xlabel('Day')
 
-    plt.savefig('./charts/monthly_yields.png')
+    plt.savefig('./static/img/monthly_yields.png')
 
     plt.title('Year based bonds yield change')
     plt.plot(df2)
@@ -29,7 +31,7 @@ def plot_screenshot(df):
     plt.ylabel('Interest % ')
     plt.xlabel('Day ')
 
-    plt.savefig('./charts/yearly_yields.png')
+    plt.savefig('./static/img/yearly_yields.png')
 
 
 if __name__ == '__main__':
